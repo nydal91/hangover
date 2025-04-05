@@ -2,7 +2,7 @@
 ![forks](https://img.shields.io/github/forks/AndreRH/hangover?style=flat-square)
 ![Release](https://img.shields.io/github/v/release/AndreRH/hangover?style=flat-square)
 
-Make sure to leave a :star: :)
+Make sure to leave a :stars: :)
 
 ## Hangover
 This is Hangover, a project started by André Zwing and Stefan Dösinger in 2016 that can
