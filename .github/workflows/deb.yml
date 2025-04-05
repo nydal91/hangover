@@ -150,15 +150,17 @@ jobs:
     - name: Build package
       run: cd fex; docker build -t fexpeec .
 
+    - name: Build package
+      run: cd dxvk; docker build -t dxvk .
+
     - name: Extract package
-      run: docker run --rm fexpeec cat /opt/deb/hangover-libarm64ecfex_${{ env.HOVERSION }}_arm64.deb > hangover-libarm64ecfex_${{ env.HOVERSION }}_arm64.deb
+      run: docker run --rm fexpeec cat /opt/deb/hangover-libarm64ecfex_${{ env.HOVERSION }}.tar.gz > hangover-libarm64ecfex_${{ env.HOVERSION }}.tar.gz
 
     - name: Upload Artifact
       uses: actions/upload-artifact@v4
       with:
-        name: hangover-libarm64ecfex_${{ env.HOVERSION }}_arm64.deb
-        path: hangover-libarm64ecfex_${{ env.HOVERSION }}_arm64.deb
-
+        name: hangover-libarm64ecfex_${{ env.DXVKVERSION }}.tar.gz
+        path: hangover-libarm64ecfex_${{ env.DXVKVERSION }}.tar.gz
 
   dxvk:
     needs: foundations
